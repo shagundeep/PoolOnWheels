@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "310852544703",
+    "firebase_url": "https://poolonwheels-fc550.firebaseio.com",
+    "project_id": "poolonwheels-fc550",
+    "storage_bucket": "poolonwheels-fc550.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310852544703:android:9e013cbb5d42e979",
+        "android_client_info": {
+          "package_name": "com.example.shagun.poolonwheels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310852544703-7otj6gri2jq0uqt500breiinni6eumqi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shagun.poolonwheels",
+            "certificate_hash": "d04cf615e6c1c9ef75ac70cf8a4884b719989e22"
+          }
+        },
+        {
+          "client_id": "310852544703-4lv9rs1532n5b2f5396uh31kcpnbnago.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRsUthKQaSYj3SK8w_FBw_iU0ki2jjOXE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310852544703-4lv9rs1532n5b2f5396uh31kcpnbnago.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
