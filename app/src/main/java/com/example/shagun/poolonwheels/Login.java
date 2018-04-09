@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
         login = findViewById(R.id.loginbtn);
         signup = findViewById(R.id.signupbtn);
         userlist = new ArrayList<>();
-        databaseusers= FirebaseDatabase.getInstance().getReference("users");
+        databaseusers= FirebaseDatabase.getInstance().getReference("Users");
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,10 +43,12 @@ public class Login extends AppCompatActivity {
                 String usid = sid.getText().toString().trim();
                 int flag=0;
                 String upassword = password.getText().toString().trim();
+               // Toast.makeText(Login.this, ""+userlist.size(), Toast.LENGTH_SHORT).show();
                 for(int i=0;i<userlist.size();i++)
                 {
                     User user = userlist.get(i);
-                    if(usid.equalsIgnoreCase(user.getUsername())&& upassword.equalsIgnoreCase(user.getUserpassword())) {
+                    //Toast.makeText(Login.this, ""+user.getUsername()+""+user.getUserpassword(), Toast.LENGTH_SHORT).show();
+                    if(usid.equalsIgnoreCase(user.getUserid())&& upassword.equalsIgnoreCase(user.getUserpassword())) {
                         flag=1;
                         startActivity(new Intent(Login.this, Home.class));
                         Login.this.finish();
@@ -54,7 +56,7 @@ public class Login extends AppCompatActivity {
                 }
                 if(flag == 0)
                 {
-                    Toast.makeText(Login.this, "User not registered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Wrong Username or Password", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -82,6 +84,7 @@ public class Login extends AppCompatActivity {
                     User user=usersnapshot.getValue(User.class);
                     userlist.add(user);
                 }
+                //Toast.makeText(Login.this, ""+userlist.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
