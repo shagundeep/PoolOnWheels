@@ -1,5 +1,6 @@
 package com.example.shagun.poolonwheels;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -66,6 +67,9 @@ public class signup extends AppCompatActivity {
         if(!TextUtils.isEmpty(usid) || !TextUtils.isEmpty(upassword)){
             User user = new User(uname,usid,upassword,uage,unumber,ugender);
             databaseusers.child(usid).setValue(user);
+            Toast.makeText(this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(signup.this,Login.class));
+            signup.this.finish();
         }
         else
         {
